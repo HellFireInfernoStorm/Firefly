@@ -1,4 +1,4 @@
-// const wait = require('timers/promises').setTimeout;
+const wait = require('timers/promises').setTimeout;
 const { SlashCommandBuilder } = require('discord.js');
 const { EmbedBuilder } = require('discord.js');
 
@@ -41,7 +41,7 @@ module.exports = {
 			.setTimestamp(Date.now());
 
 		await interaction.editReply({ embeds: [Embed] });
-		// await wait(10000);
-		// await interaction.deleteReply();
+		await wait(10000);
+		await interaction.deleteReply();
 	},
 };
